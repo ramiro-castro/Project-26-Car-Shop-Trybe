@@ -3,7 +3,7 @@ import ICar from '../Interfaces/ICar';
 import isValidId from '../Middlewares/isValidId';
 import CarService from '../Services/CarService';
 
-class CadastrarController {
+class CarController {
   private req: Request;
   private res: Response;
   private next: NextFunction;
@@ -69,4 +69,4 @@ class CadastrarController {
   }
 }
   
-export default CadastrarController;
+export default CarController;

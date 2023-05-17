@@ -2,7 +2,7 @@ import Car from '../Domains/Car';
 import ICar from '../Interfaces/ICar';
 import CarODM from '../Models/CarODM';
 
-class CadastrarService {
+class CarService {
 //   private isValidKey(key: string): boolean {
 //     const cpfRegex = /^\d{3}.\d{3}.\d{3}-\d{2}$/;
 //     return cpfRegex.test(key);
@@ -57,4 +57,4 @@ class CadastrarService {
   }
 }
 
-export default CadastrarService;
+export default CarService;
