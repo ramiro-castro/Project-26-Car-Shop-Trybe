@@ -54,6 +54,19 @@ class CarService {
     // const { id, model, year, color, status, buyValue, doorsQty, seatsQty } = newCar;
     // return result;
   }
+  public async update(car: ICar, id: string) {
+    // if (!this.isValidKey(payment.key)) throw new Error('Invalid Key!');
+
+    // Criar instância da Model de Payment usando Mongoose
+    const carODM = new CarODM();
+    // Inserir os dados no banco
+    const updatedCar = await carODM.update(car, id);
+    if (updatedCar.matchedCount === 0) return null;
+    // Retornar os dados com o id
+    // const { model, year, color, status, buyValue, doorsQty, seatsQty } = newCar;
+    // return this.createCarDomain(newCar);
+    return { id, ...car };
+  }
 }
 
 export default CarService;
