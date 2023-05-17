@@ -25,46 +25,46 @@ class Car {
     // this =;
   }
 
-  protected setId(id: string) {
+  public setId(id: string) {
     this.id = id;
   }
 
-  protected getId() {
+  public getId() {
     return this.id;
   }
 
-  protected setModel(model: string) {
+  public setModel(model: string) {
     this.model = model;
   }
 
-  protected getModel() {
+  public getModel() {
     return this.model;
   }
 
-  protected setYear(Year: number) {
+  public setYear(Year: number) {
     this.year = Year;
   }
 
-  protected getYear() {
+  public getYear() {
     return this.year;
   }
 
-  protected setColor(color: string) {
+  public setColor(color: string) {
     this.color = color;
   }
 
-  protected getColor() {
+  public getColor() {
     return this.color;
   }
 
   public setStatus(status: boolean) {
     this.status = status;
   }
-  protected setBuyValue(buyValue: number) {
+  public setBuyValue(buyValue: number) {
     this.buyValue = buyValue;
   }
 
-  protected getBuyValue() {
+  public getBuyValue() {
     return this.buyValue;
   }
 
