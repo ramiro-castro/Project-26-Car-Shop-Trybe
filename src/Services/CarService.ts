@@ -46,11 +46,10 @@ class CarService {
   public async getById(id: string) : Promise<Car | null> {
     // if (!this.isValidKey(payment.key)) throw new Error('Invalid Key!');
 
-    // Criar instância da Model de Payment usando Mongoose
     const carODM = new CarODM();
-    // Inserir os dados no banco
+
     const car = await carODM.getById(id);
-    // Retornar os dados com o id
+
     return this.createCarDomain(car);
     // const { id, model, year, color, status, buyValue, doorsQty, seatsQty } = newCar;
     // return result;

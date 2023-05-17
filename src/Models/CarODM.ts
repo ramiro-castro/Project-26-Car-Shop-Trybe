@@ -24,14 +24,22 @@ class CarODM {
   }
 
   public async create(car: ICar): Promise<ICar> {
-    return this.model.create({ ...car });
+    const result = await this.model.create({ ...car });
+    return result;
   }
   public async getAll(): Promise<ICar[] > {
-    return this.model.find({});
+    const result = await this.model.find({});
+    return result;
   }
 
   public async getById(id: string): Promise<ICar | null> {
-    return this.model.findById(id);
+    try {
+      const result = await this.model.findById(id);
+      return result;
+    } catch (error) {
+      // Trate o erro aqui
+      return null;
+    }
   }
 }
 
