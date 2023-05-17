@@ -1,19 +1,19 @@
 import { NextFunction, Request, Response } from 'express';
 import ICar from '../Interfaces/ICar';
 import isValidId from '../Middlewares/isValidId';
-import CadastrarService from '../Services/CadastrarService';
+import CarService from '../Services/CarService';
 
 class CadastrarController {
   private req: Request;
   private res: Response;
   private next: NextFunction;
-  private service: CadastrarService;
+  private service: CarService;
 
   constructor(req: Request, res: Response, next: NextFunction) {
     this.req = req;
     this.res = res;
     this.next = next;
-    this.service = new CadastrarService();
+    this.service = new CarService();
   }
 
   public async create() {
