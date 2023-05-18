@@ -61,6 +61,7 @@ class CarService {
     const carODM = new CarODM();
     // Inserir os dados no banco
     const updatedCar = await carODM.update(car, id);
+    if (!updatedCar) return null;
     if (updatedCar.matchedCount === 0) return null;
     // Retornar os dados com o id
     // const { model, year, color, status, buyValue, doorsQty, seatsQty } = newCar;

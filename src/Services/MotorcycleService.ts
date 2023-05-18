@@ -61,6 +61,7 @@ class MotorcycleService {
     const motorcycleODM = new MotorcycleODM();
     // Inserir os dados no banco
     const updatedMotor = await motorcycleODM.update(motorcycle, id);
+    if (!updatedMotor) return null;
     if (updatedMotor.matchedCount === 0) return null;
     // Retornar os dados com o id
     // const { model, year, color, status, buyValue, doorsQty, seatsQty } = newCar;

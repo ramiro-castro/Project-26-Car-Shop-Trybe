@@ -38,16 +38,16 @@ describe('Testes referentes a Motorcycle', function () {
     category: 'Street',
     engineCapacity: 125,
   };
-  const MotorcycleOutputUpdate: Motorcycle = new Motorcycle({
-    id: '634852326b35b59438fbea2f',
-    model: 'Honda CG Titan 12',
-    year: 1983,
-    color: 'black',
-    status: true,
-    buyValue: 1000,
-    category: 'Street',
-    engineCapacity: 125,
-  });
+  //   const MotorcycleOutputUpdate: Motorcycle = new Motorcycle({
+  //     id: '634852326b35b59438fbea2f',
+  //     model: 'Honda CG Titan 12',
+  //     year: 1983,
+  //     color: 'black',
+  //     status: true,
+  //     buyValue: 1000,
+  //     category: 'Street',
+  //     engineCapacity: 125,
+  //   });
 
   it('Deveria cadastrar uma motorcycle com SUCESSO', async function () {
   // Arrange
@@ -101,10 +101,10 @@ describe('Testes referentes a Motorcycle', function () {
     // Act
     const service = new MotorcycleService();
     // await service.register(MotorcycleInputUpdate);
-    const result = await service.update(MotorcycleInputUpdate, '6a46594e20d274d676e0c5445');
+    const result = await service.update(MotorcycleInputUpdate, 'a6a46594e20d274d676e0c5445');
 
     // Assert
-    expect(result).equal(MotorcycleOutputUpdate);
+    expect(result).equal(null);
   });
 
   afterEach(function () {

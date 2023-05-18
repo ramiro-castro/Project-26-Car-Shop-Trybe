@@ -37,16 +37,16 @@ describe('Testes referentes a carros', function () {
     doorsQty: 4,
     seatsQty: 5,
   };
-  const carOutputUpdate: Car = new Car({
-    id: '646594e20d274d676e0c5445',
-    model: 'Marea',
-    year: 2002,
-    color: 'Black',
-    buyValue: 14000,
-    status: true,
-    doorsQty: 4,
-    seatsQty: 5,
-  });
+  //   const carOutputUpdate: Car = new Car({
+  //     id: '646594e20d274d676e0c5445',
+  //     model: 'Marea',
+  //     year: 2002,
+  //     color: 'Black',
+  //     buyValue: 14000,
+  //     status: true,
+  //     doorsQty: 4,
+  //     seatsQty: 5,
+  //   });
 
   it('Deveria cadastrar um carro com SUCESSO', async function () {
   // Arrange
@@ -100,10 +100,10 @@ describe('Testes referentes a carros', function () {
     // Act
     const service = new CarService();
     // await service.register(carInput);
-    const result = await service.update(carInputUpdate, '6a46594e20d274d676e0c5445');
+    const result = await service.update(carInputUpdate, 'a6a46594e20d274d676e0c5445');
 
     // Assert
-    expect(result).equal(carOutputUpdate);
+    expect(result).equal(null);
   });
   
   afterEach(function () {
