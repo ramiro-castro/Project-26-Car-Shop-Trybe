@@ -1,29 +1,26 @@
 import {
   Schema,
 } from 'mongoose';
-import ICar from '../Interfaces/ICar';
+import IMotorcycle from '../Interfaces/IMotorcycle';
 import AbstractODM from './AbstractODM';
 
-class CarODM extends AbstractODM<ICar> {
-//   private schema: Schema; // Atributo para o "molde"
-//   private model: Model<ICar>; // Atributo para criar coleção e fornecer acesso ao banco
-
+class MotorcycleODM extends AbstractODM<IMotorcycle> {
   constructor() {
-    const schemaCar = new Schema<ICar>({
+    const schemaMotorcycle = new Schema<IMotorcycle>({
       model: { type: String, required: true },
       year: { type: Number, required: true },
       color: { type: String, required: true },
       status: { type: Boolean, required: false, default: false },
       buyValue: { type: Number, required: true },
-      doorsQty: { type: Number, required: true },
-      seatsQty: { type: Number, required: true },
+      category: { type: String, required: true },
+      engineCapacity: { type: Number, required: true },
     });
-    // this.model = models.Car || model('Car', this.schema); // Antes de criar o Schema, verificar se o schema já existe. Caso não exista, o schema será criado. 
-    super(schemaCar, 'Car');  
+    // this.model = models.Motorcycle || model('Motorcycle', this.schema); // Antes de criar o Schema, verificar se o schema já existe. Caso não exista, o schema será criado. 
+    super(schemaMotorcycle, 'Motorcycle');
   }
 
-  //   public async create(car: ICar): Promise<ICar> {
-  //     const result = await this.model.create({ ...car });
+  //   public async create(moto: IMotorcycle): Promise<IMotorcycle> {
+  //     const result = await this.model.create({ ...moto });
   //     return result;
   //   }
   //   public async getAll(): Promise<ICar[] > {
@@ -49,4 +46,4 @@ class CarODM extends AbstractODM<ICar> {
 //   }
 }
 
-export default CarODM;
+export default MotorcycleODM;
